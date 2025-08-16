@@ -2,41 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sales Funnel Design System - Premium Blue & Yellow Conversion Theme */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 220 20% 98%;
+    --foreground: 220 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 220 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 15% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Conversion Blue */
+    --primary: 220 91% 48%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 220 91% 42%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Premium Dark */
+    --secondary: 220 25% 25%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Accent - Conversion Yellow/Orange */
+    --accent: 35 100% 55%;
+    --accent-foreground: 220 15% 15%;
+    --accent-hover: 35 100% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 220 20% 95%;
+    --muted-foreground: 220 15% 50%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 220 20% 90%;
+    --input: 220 20% 95%;
+    --ring: 220 91% 48%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(220 91% 48%), hsl(220 91% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(220 25% 25%), hsl(220 91% 35%));
+    --gradient-accent: linear-gradient(135deg, hsl(35 100% 55%), hsl(25 100% 50%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%), hsl(220 20% 98%));
+
+    /* Shadows */
+    --shadow-card: 0 4px 20px hsl(220 91% 48% / 0.1);
+    --shadow-button: 0 8px 30px hsl(220 91% 48% / 0.3);
+    --shadow-accent: 0 8px 30px hsl(35 100% 55% / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +118,75 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  /* Conversion Button Styles */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary to-primary-hover text-primary-foreground font-bold px-8 py-4 rounded-xl shadow-[var(--shadow-button)] hover:shadow-[var(--shadow-accent)] transform hover:scale-105 transition-all duration-300 text-lg;
+  }
+  
+  .btn-accent {
+    @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground font-bold px-8 py-4 rounded-xl shadow-[var(--shadow-accent)] hover:shadow-[var(--shadow-button)] transform hover:scale-105 transition-all duration-300 text-lg;
+  }
+
+  .btn-hero {
+    @apply bg-gradient-to-r from-accent to-accent-hover text-accent-foreground font-black px-12 py-6 rounded-2xl shadow-[var(--shadow-accent)] hover:shadow-[var(--shadow-button)] transform hover:scale-110 transition-all duration-300 text-xl uppercase tracking-wide;
+  }
+
+  /* Card Styles */
+  .card-gradient {
+    @apply bg-gradient-to-br from-card to-muted border border-border/50 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-button)] transform hover:scale-105 transition-all duration-300 rounded-2xl;
+  }
+
+  /* Gradient Backgrounds */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
+  /* Animations */
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2s infinite;
+  }
+
+  /* Notification Animation */
+  .notification-slide {
+    animation: slideInUp 0.5s ease-out, slideOutDown 0.5s ease-out 4.5s forwards;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100%) translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutDown {
+  from {
+    transform: translateY(0) translateX(-50%);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(100%) translateX(-50%);
+    opacity: 0;
   }
 }
