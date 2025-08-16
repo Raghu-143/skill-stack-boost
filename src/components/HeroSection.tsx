@@ -17,12 +17,13 @@ const HeroSection = () => {
 
         {/* Video Section */}
         <div className="max-w-4xl mx-auto mb-8">
-          <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative w-full aspect-video rounded-3xl overflow-hidden shadow-2xl border-2 border-primary/30">
             <iframe
-              src="https://videopress.com/v/qfjdnGpB"
+              src="https://videopress.com/v/qfjdnGpB?autoplay=1&loop=1"
               className="w-full h-full"
               frameBorder="0"
               allowFullScreen
+              allow="autoplay"
               title="Course Preview Video"
             />
           </div>
@@ -31,13 +32,13 @@ const HeroSection = () => {
         <CountdownTimer />
 
         {/* Certificate Preview */}
-        <div className="max-w-md mx-auto mb-8 p-6 bg-card/20 backdrop-blur-sm rounded-2xl border border-primary-foreground/20">
-          <div className="bg-card text-card-foreground p-4 rounded-xl">
-            <div className="text-primary font-bold text-lg mb-2">🏆 CERTIFICATE OF COMPLETION</div>
-            <div className="text-sm text-muted-foreground">
+        <div className="max-w-md mx-auto mb-8 p-6 card-gradient border-2 border-accent/30">
+          <div className="bg-gradient-to-br from-primary/10 to-accent/10 text-card-foreground p-4 rounded-xl border border-primary/20">
+            <div className="text-accent font-bold text-lg mb-2">🏆 CERTIFICATE OF COMPLETION</div>
+            <div className="text-sm text-foreground/80">
               Get certified in 10+ digital skills upon completion
             </div>
-            <div className="mt-2 text-accent font-semibold">Learnfy Academy</div>
+            <div className="mt-2 text-primary font-semibold">Learnfy Academy</div>
           </div>
         </div>
 
