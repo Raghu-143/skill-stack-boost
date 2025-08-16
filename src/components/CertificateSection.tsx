@@ -1,86 +1,71 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const CertificateSection = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Get Certified in 10+ Skills & Boost Your Career
-            </h2>
-            <p className="text-lg text-muted-foreground mb-6">
-              Each course comes with a professional certificate that you can showcase on your resume, LinkedIn profile, and portfolio.
-            </p>
-            
-            <div className="space-y-4 mb-8">
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm">✓</span>
-                </div>
-                <span>Industry-recognized certificates</span>
+    <section className="py-20 gradient-hero relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-accent/10"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-8">
+            Get Certified in 10+ Skills
+          </h2>
+          <h3 className="text-2xl md:text-3xl font-bold text-accent mb-12">
+            Boost Your Career with Professional Certificates
+          </h3>
+          
+          <div className="card-gradient p-10 mb-12 hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+            <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-16 rounded-3xl border-2 border-primary/30">
+              <div className="text-8xl mb-8">🏆</div>
+              <h4 className="text-3xl font-bold text-foreground mb-6">
+                CERTIFICATE OF COMPLETION
+              </h4>
+              <div className="text-2xl text-primary font-bold mb-4">
+                10 Complete Digital Skills Mastery
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm">✓</span>
-                </div>
-                <span>Add to LinkedIn & resume</span>
+              <div className="text-xl text-muted-foreground mb-6">
+                This certifies that
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm">✓</span>
-                </div>
-                <span>Boost career opportunities</span>
+              <div className="text-3xl font-bold text-accent mb-6">
+                [Your Name Here]
               </div>
-              <div className="flex items-center space-x-3">
-                <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground text-sm">✓</span>
-                </div>
-                <span>Verify skills to employers</span>
+              <div className="text-lg text-muted-foreground mb-8">
+                has successfully completed all 10 professional courses and demonstrated mastery in:
+              </div>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-foreground/80 mb-8">
+                <div>✓ Canva Design</div>
+                <div>✓ WordPress</div>
+                <div>✓ Freelancing</div>
+                <div>✓ Dropshipping</div>
+                <div>✓ Email Marketing</div>
+                <div>✓ Digital Marketing</div>
+                <div>✓ Shopify</div>
+                <div>✓ SEO</div>
+                <div>✓ Facebook Ads</div>
+                <div>✓ UX/UI Design</div>
+              </div>
+              <div className="text-2xl font-bold text-foreground mb-2">
+                Learnfy Academy
+              </div>
+              <div className="text-base text-muted-foreground">
+                Professional Digital Skills Certification Program • Industry Recognized
               </div>
             </div>
-
-            <a
-              href="https://payments.cashfree.com/forms/10box"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block"
-            >
-              <Button className="btn-accent">
-                Get Certified Today @ ₹299
-              </Button>
-            </a>
           </div>
 
-          <div className="flex justify-center">
-            <Card className="card-gradient p-8 max-w-md w-full">
-              <CardContent className="p-0 text-center">
-                <div className="border-4 border-primary rounded-2xl p-6 bg-gradient-to-br from-primary/5 to-accent/5">
-                  <div className="text-primary text-4xl mb-4">🏆</div>
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    CERTIFICATE OF COMPLETION
-                  </h3>
-                  <div className="border-t border-primary/20 my-4"></div>
-                  <p className="text-sm text-muted-foreground mb-2">
-                    This certifies that
-                  </p>
-                  <p className="text-lg font-bold mb-2">[Your Name]</p>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    has successfully completed the
-                  </p>
-                  <p className="text-base font-semibold text-primary mb-4">
-                    10 Complete Skill Courses Bundle
-                  </p>
-                  <div className="border-t border-primary/20 my-4"></div>
-                  <div className="flex justify-between items-center text-xs text-muted-foreground">
-                    <span>Learnfy Academy</span>
-                    <span>Verified Certificate</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-10 leading-relaxed">
+            Add these professional certificates to your LinkedIn profile and resume. Showcase your expertise to employers and clients with industry-recognized credentials.
+          </p>
+
+          <a
+            href="https://payments.cashfree.com/forms/10box"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block"
+          >
+            <Button className="btn-hero">
+              🎓 Get Certified Now @ ₹299
+            </Button>
+          </a>
         </div>
       </div>
     </section>

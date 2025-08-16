@@ -1,106 +1,81 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { Star } from "lucide-react";
 
 const reviews = [
   {
+    name: "Rajesh Kumar",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
+    rating: 5,
+    review: "Amazing bundle! I learned WordPress development and started my freelancing career. Now earning ₹40k+ monthly. Best investment ever!"
+  },
+  {
     name: "Priya Sharma",
-    avatar: "PS",
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bc?w=100&h=100&fit=crop&crop=face",
     rating: 5,
-    review: "Amazing courses! I learned WordPress and started my freelancing business. Already earning ₹25,000/month!",
-    location: "Mumbai"
-  },
-  {
-    name: "Rahul Kumar",
-    avatar: "RK", 
-    rating: 5,
-    review: "The SEO course helped me rank my website on Google. Best investment I've made for my business!",
-    location: "Delhi"
-  },
-  {
-    name: "Sneha Patel",
-    avatar: "SP",
-    rating: 5,
-    review: "Facebook Ads course was incredible. My ad campaigns now generate 5x ROI consistently!",
-    location: "Bangalore"
+    review: "The Canva and Digital Marketing courses are incredible! Got a promotion at work and doubled my salary. Thank you Learnfy!"
   },
   {
     name: "Amit Singh",
-    avatar: "AS",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
     rating: 5,
-    review: "All 10 courses for ₹299 is unbelievable value. Quality content with lifetime access!",
-    location: "Pune"
+    review: "Excellent value for ₹299! All 10 courses are professionally made and updated for 2025. Perfect for beginners and experts alike."
   },
   {
-    name: "Kavya Reddy",
-    avatar: "KR",
+    name: "Sneha Patel",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
     rating: 5,
-    review: "The UX/UI design course helped me land a job at a top tech company. Worth every penny!",
-    location: "Hyderabad"
-  },
-  {
-    name: "Vikash Yadav",
-    avatar: "VY",
-    rating: 5,
-    review: "Started my dropshipping store using these courses. Now making ₹50,000+ per month!",
-    location: "Chennai"
+    review: "Used the Shopify and Facebook Ads courses to start my online store. Now making ₹1L+ monthly! Life-changing content!"
   }
 ];
 
 const ReviewsSection = () => {
   return (
-    <section className="py-16 bg-muted/30">
+    <section className="py-20 bg-gradient-to-b from-background to-muted/10">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            What Our Students Say
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+            Success Stories
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of successful students who transformed their careers
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            Join 10,000+ students who transformed their careers with our courses
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {reviews.map((review, index) => (
-            <Card key={index} className="card-gradient p-6">
-              <CardContent className="p-0">
-                <div className="flex items-center mb-4">
-                  <Avatar className="w-12 h-12 mr-4">
-                    <AvatarImage src="" />
-                    <AvatarFallback className="bg-primary text-primary-foreground font-bold">
-                      {review.avatar}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <h4 className="font-bold">{review.name}</h4>
-                    <p className="text-sm text-muted-foreground">{review.location}</p>
-                  </div>
-                </div>
-                
-                <div className="flex mb-3">
+            <div key={index} className="card-gradient p-8 text-center hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+              <div className="mb-6">
+                <img
+                  src={review.image}
+                  alt={review.name}
+                  className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-primary/20"
+                />
+                <div className="flex justify-center mb-4">
                   {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-yellow-500">⭐</span>
+                    <Star key={i} className="w-6 h-6 text-accent fill-current" />
                   ))}
                 </div>
-                
-                <p className="text-sm text-muted-foreground italic">
-                  "{review.review}"
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+              <p className="text-muted-foreground text-base mb-6 italic leading-relaxed">
+                "{review.review}"
+              </p>
+              <h4 className="font-bold text-card-foreground text-lg">
+                {review.name}
+              </h4>
+              <p className="text-primary text-sm mt-1">Verified Student</p>
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-16">
           <a
             href="https://payments.cashfree.com/forms/10box"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block"
           >
-            <Button className="btn-primary">
-              Join Our Success Stories
-            </Button>
+            <button className="btn-hero">
+              🌟 Join Our Success Stories
+            </button>
           </a>
         </div>
       </div>
