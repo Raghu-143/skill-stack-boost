@@ -13,25 +13,25 @@ const CertificateSection = () => {
             Boost Your Career with Professional Certificates
           </h3>
           
-          <div className="card-gradient p-10 mb-12 hover:shadow-[var(--shadow-glow)] transition-all duration-300">
-            <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-16 rounded-3xl border-2 border-primary/30">
-              <div className="text-8xl mb-8">🏆</div>
-              <h4 className="text-3xl font-bold text-foreground mb-6">
+          <div className="card-gradient p-4 md:p-10 mb-12 hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+            <div className="bg-gradient-to-br from-primary/20 to-accent/20 p-6 md:p-16 rounded-2xl md:rounded-3xl border-2 border-primary/30">
+              <div className="text-4xl md:text-8xl mb-4 md:mb-8">🏆</div>
+              <h4 className="text-lg md:text-3xl font-bold text-foreground mb-3 md:mb-6">
                 CERTIFICATE OF COMPLETION
               </h4>
-              <div className="text-2xl text-primary font-bold mb-4">
+              <div className="text-base md:text-2xl text-primary font-bold mb-2 md:mb-4">
                 10 Complete Digital Skills Mastery
               </div>
-              <div className="text-xl text-muted-foreground mb-6">
+              <div className="text-sm md:text-xl text-muted-foreground mb-3 md:mb-6">
                 This certifies that
               </div>
-              <div className="text-3xl font-bold text-accent mb-6">
+              <div className="text-lg md:text-3xl font-bold text-accent mb-3 md:mb-6">
                 [Your Name Here]
               </div>
-              <div className="text-lg text-muted-foreground mb-8">
+              <div className="text-sm md:text-lg text-muted-foreground mb-4 md:mb-8">
                 has successfully completed all 10 professional courses and demonstrated mastery in:
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-foreground/80 mb-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 text-xs md:text-sm text-foreground/80 mb-4 md:mb-8">
                 <div>✓ Canva Design</div>
                 <div>✓ WordPress</div>
                 <div>✓ Freelancing</div>
@@ -43,10 +43,10 @@ const CertificateSection = () => {
                 <div>✓ Facebook Ads</div>
                 <div>✓ UX/UI Design</div>
               </div>
-              <div className="text-2xl font-bold text-foreground mb-2">
+              <div className="text-lg md:text-2xl font-bold text-foreground mb-1 md:mb-2">
                 Learnfy Academy
               </div>
-              <div className="text-base text-muted-foreground">
+              <div className="text-xs md:text-base text-muted-foreground">
                 Professional Digital Skills Certification Program • Industry Recognized
               </div>
             </div>
